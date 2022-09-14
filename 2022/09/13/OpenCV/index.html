@@ -168,6 +168,10 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install aptitude</span><br></pre></td></tr></table></figure>
 <p>通过 aptitude 安装 OpenCV 的依赖库：下方指令摘自 OpenCV 2.4.9 的官方帮助文档：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[compiler] sudo apt-get install build-essential</span><br><span class="line">[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</span><br></pre></td></tr></table></figure>
+<p>安装依赖库后，利用CMake进行构建：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ~/opencv</span><br><span class="line">mkdir release</span><br><span class="line">cd release</span><br><span class="line">cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..</span><br></pre></td></tr></table></figure>
+<p>其中CMake可能会报错：</p>
+
         </div>
 
         
