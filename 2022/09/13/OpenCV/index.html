@@ -153,20 +153,20 @@
         
 
         <div class="article-content markdown-body">
-            <p>近期在Ubuntu 20.04上安装了OpenCV 2.4.9，安装过程甚是艰辛，故作此文专门记录。</p>
+            <p>近期在 Ubuntu 20.04 上安装了 OpenCV 2.4.9，安装过程甚是艰辛，故作此文专门记录。</p>
 <span id="more"></span>
-<p>一、更换apt阿里源</p>
+<p>一、更换 apt 阿里源</p>
 <p>先备份一下</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br></pre></td></tr></table></figure>
-<p>用vi或gedit打开sources.list：</p>
+<p>用 vi 或 gedit 打开 sources.list：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
 <p>将其中内容替换为：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse</span><br><span class="line">​</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse</span><br><span class="line">​</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse</span><br><span class="line">​</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse</span><br><span class="line">​</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-<p>然后更新apt</p>
+<p>然后更新 apt</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
-<p>为了便捷的安装opencv部分比较旧的依赖库，下面安装aptitude：</p>
+<p>为了便捷的安装 OpenCV 部分比较旧的依赖库，下面安装 aptitude：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt install aptitude</span><br></pre></td></tr></table></figure>
-<p>通过aptitude安装opencv的依赖库：下面为opencv2.4.9的官方帮助文档：</p>
+<p>通过 aptitude 安装 OpenCV 的依赖库：下方指令摘自 OpenCV 2.4.9 的官方帮助文档：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[compiler] sudo apt-get install build-essential</span><br><span class="line">[required] sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev</span><br><span class="line">[optional] sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev</span><br></pre></td></tr></table></figure>
         </div>
 
