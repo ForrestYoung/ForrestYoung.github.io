@@ -154,9 +154,30 @@
 
         <div class="article-content markdown-body">
             <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sba_motstr_levmar_x(n3Dpts, ncon3Dpts, ncams, nconcam, vmask, motstruct,</span><br><span class="line">                                cnp, pnp, imgpts, NULL, mnp, img_ParallelProj_x,</span><br><span class="line">                                img_ParallelProj_jac_x, &amp;glob, MAXITER, verbose, opts, info);</span><br></pre></td></tr></table></figure>
+<p>对该函数的初步解读：</p>
 <p>sba = Sparse Bundle Adjustment</p>
 <p>motstr = Motion and Structure（优化相机参数与三维点坐标参数）</p>
-<p>levmar = Levenberg-Marquardt算法</p>
+<p>levmar = Levenberg-Marquardt 算法</p>
+<p>修改后的算法：</p>
+<p>sba_motstr_l1norm_x</p>
+<p>函数输入参数说明：</p>
+<p>n3Dpts:<br>
+ncon3Dpts:<br>
+ncams:<br>
+nconcam:<br>
+vmask:<br>
+motstruct:<br>
+cnp:<br>
+pnp:<br>
+imgpts:<br>
+mnp:<br>
+img_ParallelProj_x:<br>
+img_ParallelProj_jac_x:<br>
+glob:<br>
+MAXITER:<br>
+verbose:<br>
+opts:<br>
+info:</p>
 
         </div>
 
